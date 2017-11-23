@@ -1,0 +1,42 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="layout">
+  <div class="container-fluid header-main">
+  <header class="header">
+    <div class="logo"><a routerLink="/home"><img [src]="logoImagePath" alt="" /></a></div>
+    <div class="header-right">
+      <a routerLink="/contact" class="contact">Contact</a>
+      <button class="btn btn-success">Login</button>
+    </div>
+  </header>
+</div>
+<div class="content-main">
+  <div class="col-md-2 side-navs" [style.height.px]="fullHeight">
+    <nav class="navbar navbar-default sidebar inner-nav" role="navigation">
+      <ul class="nav navbar-nav">
+        <li class="active"><a routerLink="/home">Home<span class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
+        <li class="dropdown">
+          <a routerLink="/speakers">Speakers<span  class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a>
+        </li>          
+        <li ><a routerLink="/products">Products<span class="pull-right hidden-xs showopacity glyphicon glyphicon-shopping-cart"></span></a></li>        
+        <li ><a routerLink="/contact">Contact<span class="pull-right hidden-xs showopacity glyphicon glyphicon-earphone"></span></a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <section class="col-md-10 content-field">
+    <div class="row">
+    <div class="banner"><img [src]="bannerImagePath" alt="" /></div>
+    </div>
+    
+  <div class="content-area">
+    <div class="row">
+      <div class="col-md-12">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+  </section>
+</div>
+  
+</div>
+

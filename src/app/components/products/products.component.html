@@ -1,0 +1,61 @@
+<h2>Products</h2>
+
+<form class="form-horizontal" (ngSubmit)='addProducts(add)' [formGroup]='productForm' novalidate>
+<!-- Form Name -->
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="product_id">PRODUCT ID</label>  
+  <div class="col-md-4">
+  <input formControlName='product_id' type='text' placeholder='Product ID' class="form-control input-md" required="" type="text">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="product_name">PRODUCT NAME</label>  
+  <div class="col-md-4">
+  <input formControlName='product_name' type='text' placeholder='Product Name' class="form-control input-md" required="" type="text">
+    
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="product_categorie">PRODUCT CATEGORY</label>
+  <div class="col-md-4">
+    <select class="form-control" id="power" formControlName='product_categorie'>
+      <option *ngFor="let list of products" [value]="list">{{list}}</option>
+    </select>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="avail_quant">AVAILABLE QUANTITY</label>  
+  <div class="col-md-4">
+  <input formControlName='avail_quant' type='text' placeholder='Available Quantity' class="form-control input-md" required="" type="text">
+    
+  </div>
+</div>
+
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="product_descrip">PRODUCT DESCRIPTION</label>
+  <div class="col-md-4">                     
+    <textarea class="product_descrip" formControlName="product_descrip" class="form-control input-md" required=""></textarea>
+  </div>
+</div>
+
+<!-- Text input-->
+<!-- Button -->
+  <label class="col-md-4 control-label" for="singlebutton">Single Button</label>
+  <div class="col-md-4">
+    <button (click)="addProducts(add)" id="singlebutton" name="singlebutton" class="btn btn-primary">Button</button>
+  </div>
+
+</form>
+{{productForm.value | json}}
+{{productForm.status | json}}
+
