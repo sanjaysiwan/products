@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="layout">
+        <header class="header fixed-top d-flex align-items-center">
+            <div class="container d-flex align-items-center justify-content-between">
+                <div class="logo-section">
+                    <div class="logo">
+                        <a href="index.html"><img src="images/logo.svg" alt=""></a>
+                    </div>
+                </div>
+                <span class="toggle-nav"><img src="images/menu.svg" alt=""></span>
+
+                <nav class="mobile-nav">
+                    <div class="mobile-logo">
+                        <a href=""><img src="images/logo.svg" alt=""></a>
+                    </div>
+                    <ul class="">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li>
+                            <a href="javascript:void(0)">Services</a>
+                            <div class="dropdown-sec">
+                                <ul>
+                                    <li><a href="">Service-1</a></li>
+                                    <li>
+                                        <a href="">Service-2</a>
+                                        <div class="second-lavel">
+                                            <ul>
+                                                <li><a href="">Sub-service-1</a></li>
+                                                <li><a href="">Sub-service-2</a></li>
+                                                <li><a href="">Sub-service-3</a></li>
+                                                <li><a href="">Sub-service-4</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li><a href="">Service-3</a></li>
+                                    <li><a href="">Service-4</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="">Quick enquiry</a></li>
+                        <li><a href="">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="nav-overlay">
+                <div class="nav-close"><img src="images/close_green.svg" alt=""></div>
+            </div>
+        </header>
+        <section class="banner">
+            <div class="banner-inner">
+                <div class="home-banner">
+                    <div class="banner-slider" data-arrows="true" data-autoplay="true">
+                        <div class="item-slide">
+                            <div class="inner-slide">
+                                <div class="slide-img"><img src="images/banner_1.jpg" alt=""></div>
+                                <div class="container slide-content d-flex align-items-center justify-content-center offset-md-1">
+                                    <div class="inner-container">
+                                        <span class="top-head">Looking for man power solutions?</span>
+                                        <h2>Find that <span>Contract Force</span></h2>
+                                        <p>We Provide Skilled, Qualified and Experienced Manpower Solutions with High Satisfaction Rate. Choose us and never regret.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-slide">
+                            <div class="inner-slide">
+                                <div class="slide-img"><img src="images/banner_1.jpg" alt=""></div>
+                                <div class="container slide-content d-flex align-items-center justify-content-center right-align offset-md-1">
+                                    <div class="inner-container">
+                                        <span class="top-head">COMMITTED TO YOUR SUCCESS</span>
+                                        <h2>Delivering <span>The promise</span></h2>
+                                        <p>We believe in spreading smiles and smiles comes through the great quality of work. Our quality of work reflects through our Man powers. Hire us today!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-slide">
+                            <div class="inner-slide">
+                                <div class="slide-img"><img src="images/banner_1.jpg" alt=""></div>
+                                <div class="container slide-content d-flex align-items-center justify-content-center offset-md-1">
+                                    <div class="inner-container">
+                                        <span class="top-head">WE WANT TO SEE YOU SUCCEED</span>
+                                        <h2>Your success <span>Our business</span></h2>
+                                        <p>Energistically myocardinate clicks-and-mortar testing procedures whereas next-generation manufactured products.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
+    <!-- <script src="js/slick.min.js"></script> -->
+
+    <script>
+        $(document).ready(function($) {
+
+            // Header navigation
+
+            $('.header span.toggle-nav').click(function() {
+                $('.nav-overlay').fadeIn();
+                $('.mobile-nav').css('transform', 'translatex(0)');
+            });
+
+            $('.nav-close').click(function() {
+                $('.nav-overlay').fadeOut(500);
+                $('.mobile-nav').css('transform', 'translatex(-100%)');
+            });
+
+            var modal = document.querySelector('.nav-overlay');
+            $(modal).on('click', function(e) {
+                if (e.target == modal) {
+                    $('.mobile-nav').css('transform', 'translatex(-100%)');
+                    $(this).fadeOut();
+                }
+            });
+
+
+            // If multiple dropdown go off window
+
+            $("body").on('mouseenter mouseleave', function(e) {
+                if ($('.dropdown-sec ', this).length) {
+                    var elm = $('.dropdown-sec :first', this);
+                    var off = elm.offset();
+                    var l = off.left;
+                    var w = elm.width();
+                    var docH = $(".mobile-nav").height();
+                    var docW = $(".mobile-nav").width();
+                    var isEntirelyVisible = (l + w <= docW);
+                    if (!isEntirelyVisible) {
+                        $(this).addClass('edge');
+                    } else {
+                        $(this).removeClass('edge');
+                    }
+                }
+            });
+
+            if ($(window).width() < 991) {
+                $('.header').addClass('mob-view');
+            } else {
+                $('.header').removeClass('mob-view');
+            }
+
+            $('.header ul li').click(function() {
+                $(this).addClass('active').siblings().removeClass('active');
+            });
+
+            $('.header ul li').each(function() {
+                if ($(this).children('.dropdown-sec').hasClass('dropdown-sec')) {
+                    $(this).addClass('arrow');
+                } else {
+                    $(this).removeClass('arrow');
+                }
+            });
+
+
+            $('.header ul li .dropdown-sec ul li').each(function() {
+                if ($(this).children('.second-lavel').hasClass('second-lavel')) {
+                    $(this).addClass('right-arrow');
+                } else {
+                    $(this).removeClass('right-arrow');
+                }
+            });
+
+
+            // Banner Slider
+
+            $('.banner-slider').slick({
+                dots: false,
+                arrows: true,
+                infinite: true,
+                speed: 500,
+                fade: !0,
+                cssEase: 'linear',
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                draggable: false,
+                responsive: [{
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            infinite: true
+                        }
+                    }, {
+                        breakpoint: 768,
+                        settings: {
+                            draggable: true,
+                        }
+                    }, {
+                        breakpoint: 600,
+                        settings: {
+                            dots: true,
+                            arrows: false,
+                            slidesToShow: 1,
+                            draggable: true,
+                            slidesToScroll: 1
+                        }
+                    }, {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            draggable: true,
+                            slidesToScroll: 1
+                        }
+                    }
+
+                ]
+            });
+
+
+
+            $(window).scroll(function() {
+                if ($(document).scrollTop() > 50) {
+                    $(".header").addClass("header-scroll");
+                } else {
+                    $(".header").removeClass("header-scroll");
+                }
+            });
+
+        });
+    </script>
+</body>
+
+</html>
