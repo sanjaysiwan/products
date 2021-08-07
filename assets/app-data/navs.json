@@ -1,0 +1,57 @@
+[{
+        "id": 1,
+        "name": "Home",
+        "link": "/home",
+        "submenu": []
+    },
+    {
+        "id": 2,
+        "name": "About Us",
+        "link": "/about",
+        "submenu": []
+    },
+    {
+        "id": 3,
+        "name": "Services",
+        "link": "/",
+        "submenu": [{
+                "id": 1,
+                "name": "Painting",
+                "link": "/painting"
+            },
+            {
+                "id": 2,
+                "name": "Designing",
+                "link": "/designing"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Clients",
+        "link": "/",
+        "submenu": [{
+                "id": 1,
+                "name": "Wipro",
+                "link": "/wipro"
+            },
+            {
+                "id": 2,
+                "name": "TCS",
+                "link": "/tcs"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Portfolio",
+        "link": "/portfolio",
+        "submenu": []
+    },
+    {
+        "id": 6,
+        "name": "Contact",
+        "link": "/contact",
+        "submenu": []
+    }
+]

@@ -1,0 +1,121 @@
+[{
+    "navigation": [{
+            "id": 1,
+            "name": "Home",
+            "link": "/home",
+            "submenu": []
+        },
+        {
+            "id": 2,
+            "name": "About Us",
+            "link": "/about",
+            "submenu": []
+        },
+        {
+            "id": 3,
+            "name": "Services",
+            "link": "/",
+            "submenu": [{
+                    "id": 1,
+                    "name": "Painting",
+                    "link": "/painting"
+                },
+                {
+                    "id": 2,
+                    "name": "Designing",
+                    "link": "/designing"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Clients",
+            "link": "/",
+            "submenu": [{
+                    "id": 1,
+                    "name": "Wipro",
+                    "link": "/wipro"
+                },
+                {
+                    "id": 2,
+                    "name": "TCS",
+                    "link": "/tcs"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Portfolio",
+            "link": "/portfolio",
+            "submenu": []
+        },
+        {
+            "id": 6,
+            "name": "Contact",
+            "link": "/contact",
+            "submenu": []
+        },
+        {
+            "id": 7,
+            "name": "Dashboard",
+            "link": "/dashboard",
+            "submenu": []
+        }
+    ],
+    "banner": [{
+            "id": 1,
+            "banner_img": "../assets/images/banner_1.jpg",
+            "title": "Slide one",
+            "sub_title": "You have to define what kind of index type the object has."
+        },
+        {
+            "id": 2,
+            "banner_img": "../assets/images/banner_2.jpg",
+            "title": "Slide two",
+            "sub_title": "You have to define what kind of index type the object has."
+        },
+        {
+            "id": 3,
+            "banner_img": "../assets/images/banner_3.jpg",
+            "title": "Slide three",
+            "sub_title": "You have to define what kind of index type the object has."
+        }
+    ],
+    "users": [{
+            "id": 1,
+            "user_img": "../assets/images/user_1.jpg",
+            "user_name": "John Motto",
+            "description": "You have to define what kind of index type the object has."
+        },
+        {
+            "id": 2,
+            "user_img": "../assets/images/user_2.jpg",
+            "user_name": "Todd Motto",
+            "description": "You have to define what kind of index type the object has."
+        },
+        {
+            "id": 4,
+            "user_img": "../assets/images/user_3.jpg",
+            "user_name": "Michel jon",
+            "description": "You have to define what kind of index type the object has."
+        },
+        {
+            "id": 5,
+            "user_img": "../assets/images/user_4.jpg",
+            "user_name": "John Herry",
+            "description": "You have to define what kind of index type the object has."
+        },
+        {
+            "id": 6,
+            "user_img": "../assets/images/user_5.jpg",
+            "user_name": "Shane watt",
+            "description": "You have to define what kind of index type the object has."
+        },
+        {
+            "id": 7,
+            "user_img": "../assets/images/user_6.jpg",
+            "user_name": "Rambo dcock",
+            "description": "You have to define what kind of index type the object has."
+        }
+    ]
+}]

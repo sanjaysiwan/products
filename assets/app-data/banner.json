@@ -1,0 +1,19 @@
+[{
+        "id": 1,
+        "banner_img": "../assets/images/banner_1.jpg",
+        "title": "Slide one",
+        "sub_title": "You have to define what kind of index type the object has."
+    },
+    {
+        "id": 2,
+        "banner_img": "../assets/images/banner_2.jpg",
+        "title": "Slide two",
+        "sub_title": "You have to define what kind of index type the object has."
+    },
+    {
+        "id": 3,
+        "banner_img": "../assets/images/banner_3.jpg",
+        "title": "Slide three",
+        "sub_title": "You have to define what kind of index type the object has."
+    }
+]
